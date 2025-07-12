@@ -3,7 +3,6 @@ package com.codehorizon.skillswap
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 
 class StartUpActivity : AppCompatActivity() {
@@ -18,7 +17,7 @@ class StartUpActivity : AppCompatActivity() {
         // Set click listener for the button
         joinNowButton.setOnClickListener {
             // Navigate to HomeActivity
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, UserloginActivity::class.java))
             finish() // Close this activity
         }
     }

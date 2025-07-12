@@ -1,0 +1,211 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="16dp"
+    android:background="@drawable/background">
+
+    <!-- Top Buttons -->
+    <LinearLayout
+        android:id="@+id/topButtons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            android:text="Save" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/discardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/white"
+            android:text="Discard" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@color/yellow"
+            android:text="Home" />
+    </LinearLayout>
+
+    <!-- Profile Image -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/boy"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topButtons"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Image Buttons -->
+    <LinearLayout
+        android:id="@+id/imageButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addEditPhoto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:padding="4dp"
+            android:background="@color/yellow"
+            android:text="Add/Edit" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/removePhoto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:padding="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/yellow"
+            android:text="Remove" />
+    </LinearLayout>
+
+    <!-- Name Field -->
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topButtons"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Your name"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/nameLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/profileImage" />
+
+    <!-- Location Field -->
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/nameInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/locationInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Your city"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/locationLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Skills Offered -->
+    <TextView
+        android:id="@+id/skillsOfferedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skills Offered"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/locationInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/skillsOfferedInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="e.g. Design, Editing"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsOfferedLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Skills Wanted -->
+    <TextView
+        android:id="@+id/skillsWantedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skills Wanted"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsOfferedInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/skillsWantedInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="e.g. Python, JS"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsWantedLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Availability -->
+    <TextView
+        android:id="@+id/availabilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Availability"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/skillsWantedInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/availabilityInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="e.g. Weekends"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/availabilityLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Profile Visibility -->
+    <TextView
+        android:id="@+id/profileVisibilityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Visibility"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/availabilityInput"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/visibilitySpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_border"
+        android:spinnerMode="dropdown"
+        android:padding="8dp"
+        android:entries="@array/visibility_options"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/profileVisibilityLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

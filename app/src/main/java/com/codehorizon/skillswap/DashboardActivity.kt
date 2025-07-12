@@ -2,6 +2,7 @@ package com.codehorizon.skillswap
 
 import android.content.Context
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -18,16 +19,17 @@ class DashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
 
         val navView: BottomNavigationView = findViewById(R.id.bottom_nav)
-        val toolbar: MaterialToolbar = findViewById(R.id.topAppBar)
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
         val appBarConfiguration = AppBarConfiguration(
+
             setOf(
                 R.id.homeFragment,
                 R.id.pendingFragment,
@@ -35,8 +37,7 @@ class DashboardActivity : AppCompatActivity() {
                 R.id.profileFragment
             )
         )
-        setSupportActionBar(toolbar)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
         navView.setupWithNavController(navController)
         navView.itemBackground = null
     }

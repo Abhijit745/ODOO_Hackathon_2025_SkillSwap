@@ -6,21 +6,17 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.codehorizon.skillswap.fragments.HomeFragment"
-        android:label="Home" />
+        android:name="com.codehorizon.skillswap.fragments.HomeFragment" />
 
     <fragment
         android:id="@+id/pendingFragment"
-        android:name="com.codehorizon.skillswap.fragments.PendingTaskFragment"
-        android:label="Pending Task" />
+        android:name="com.codehorizon.skillswap.fragments.PendingTaskFragment" />
 
     <fragment
         android:id="@+id/conversionFragment"
-        android:name="com.codehorizon.skillswap.fragments.ConversionFragment"
-        android:label="Conversion" />
+        android:name="com.codehorizon.skillswap.fragments.ConversionFragment" />
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.codehorizon.skillswap.fragments.ProfileFragment"
-        android:label="Profile" />
+        android:name="com.codehorizon.skillswap.fragments.ProfileFragment" />
 </navigation>
